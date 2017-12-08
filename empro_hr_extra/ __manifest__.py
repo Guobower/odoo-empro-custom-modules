@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 {
     'name': "Empro hr module with extra fields",
     'version': "1.6",
