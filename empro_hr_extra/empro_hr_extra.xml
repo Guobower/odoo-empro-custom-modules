@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
   <data>
-
+<!--
         <record model="ir.ui.view" id="empro_hr_extra">
         <field name="name">hr.employee.form</field>
         <field name="model">hr.employee</field>
@@ -39,6 +39,6 @@
 
         </field>
         </record>
-
+-->
   </data>
 </openerp>
