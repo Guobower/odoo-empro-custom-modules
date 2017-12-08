@@ -27,9 +27,9 @@
                         <field name="months_hired" class="oe_read_only"/>
                         <field name="days_hired" class="oe_read_only"/>
                         <field name="last_settlement" />
-                        <field name="years_settlement" class="oe_read_only"/>
+                        <!--field name="years_settlement" class="oe_read_only"/>
                         <field name="months_settlement" class="oe_read_only"/>
-                        <field name="days_settlement" class="oe_read_only"/>
+                        <field name="days_settlement" class="oe_read_only"/-->
                     </group>
 
             </xpath>
