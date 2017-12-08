@@ -1,15 +1,15 @@
-from openerp.osv import fields, osv
+# -*- coding: utf-8 -*-
+from odoo import http
+from odoo import models, fields, api, tools
 import time
 import datetime
-from openerp import tools, api
-from openerp.osv.orm import except_orm
-from openerp.tools.translate import _
+from odoo.tools.translate import _
 from dateutil.relativedelta import relativedelta
 
 def str_to_datetime(strdate):
     return datetime.datetime.strptime(strdate, tools.DEFAULT_SERVER_DATE_FORMAT)
 
-class empro_employee(osv.osv):
+class empro_employee(models.Model):
     _inherit = "hr.employee"
 
     _columns = {
