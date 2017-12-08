@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
   <data>
 
         <record model="ir.ui.view" id="empro_hr_extra">
@@ -23,13 +23,13 @@
             <xpath expr="//sheet/notebook/page[3]/group" position="after">
                     <group string="Antiguedad" name="antiguedad_group">
                         <field name="start_date" />
-                        <!--field name="years_hired" class="oe_read_only"/>
+                        <field name="years_hired" class="oe_read_only"/>
                         <field name="months_hired" class="oe_read_only"/>
                         <field name="days_hired" class="oe_read_only"/>
                         <field name="last_settlement" />
                         <field name="years_settlement" class="oe_read_only"/>
                         <field name="months_settlement" class="oe_read_only"/>
-                        <field name="days_settlement" class="oe_read_only"/-->
+                        <field name="days_settlement" class="oe_read_only"/>
                     </group>
 
             </xpath>
@@ -41,4 +41,4 @@
         </record>
 
   </data>
-</openerp>
+</odoo>
