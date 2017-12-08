@@ -11,5 +11,5 @@
         'security/empro_hr_extra_security.xml'
     ],
     'demo': [],
-    'installable': True,
+    'installable': True
 }
