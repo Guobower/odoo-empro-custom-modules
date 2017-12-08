@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "Empro hr module with extra fields",
-    'version': "1.6",
+    'version': "1.601",
     'author': "Raul Romero",
     'category': "Tools",
      'website': "http://www.emproltda.com",
