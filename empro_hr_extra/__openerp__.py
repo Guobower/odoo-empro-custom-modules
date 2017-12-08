@@ -3,6 +3,8 @@
     'version': "1.4",
     'author': "Raul Romero",
     'category': "Tools",
+     'website': "http://www.emproltda.com",
+
     'depends': ['hr'],
     'data': [
         'empro_hr_extra.xml',
