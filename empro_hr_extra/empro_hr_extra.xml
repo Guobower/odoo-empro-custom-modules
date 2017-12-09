@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
         <record id="empro_hr_extra" model="ir.ui.view" >
-            <field name="name">hr.employee.form</field>
+            <field name="name">hr.employee.form.view</field>
             <field name="model">hr.employee</field>
-            <field name="type">form</field>
-            <field name="inherit_id" ref="hr.view_employee_form" />
+            <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
+            <xpath expr="//notebook/page[last()]" position="after">
+                     <page name="hr_empro_setting" string="Campos para EMPRO">
+                        <group>
+                            <group>
+                                <field name="legal_name"/>
+                                <field name="employee_code"/>
+                                <field name="start_date"/>
+                            </group>
+                        </group>
+                     </page>
+            </xpath>
+                <!-- 
                 <xpath expr="//sheet/div[2]/h1" position="after">
                      <label for="legal_name" class="oe_edit_only"/>
                                 <h3>
@@ -22,16 +33,17 @@
                 <xpath expr="//sheet/notebook/page[3]/group" position="after">
                         <group string="Antiguedad" name="antiguedad_group">
                             <field name="start_date" />
-                            <!--field name="years_hired" class="oe_read_only"/>
+                            <field name="years_hired" class="oe_read_only"/>
                             <field name="months_hired" class="oe_read_only"/>
                             <field name="days_hired" class="oe_read_only"/>
                             <field name="last_settlement" />
                             <field name="years_settlement" class="oe_read_only"/>
                             <field name="months_settlement" class="oe_read_only"/>
-                            <field name="days_settlement" class="oe_read_only"/-->
+                            <field name="days_settlement" class="oe_read_only"/>
                         </group>
 
                 </xpath>
             </field>
+        -->
         </record>
 </odoo>

@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from odoo import http
 from odoo import models, fields, api, tools
 import time
 import datetime
