@@ -1,3 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="empro_hr_extra_form_view" model="ir.ui.view">
+            <field name="name">hr.employee.form.view</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[last()]" position="after">
+                     <page name="hr_empro_settings" string="Campos Empro">
+                        <group>
+                            <group>
+                                <field name="employee_code"/>
+                                <field name="legal_name"/>
+                                <field name="legal_name"/>
+                            </group>
+                        </group>
+                     </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
+
+
+<!--
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
@@ -17,7 +43,7 @@
                         </group>
                      </page>
             </xpath>
-                <!-- 
+                
                 <xpath expr="//sheet/div[2]/h1" position="after">
                      <label for="legal_name" class="oe_edit_only"/>
                                 <h3>
@@ -45,7 +71,7 @@
 
                 </xpath>
             </field>
-        -->
+        
         </record>
     </data>
-</odoo>
+</odoo>-->
