@@ -3,6 +3,7 @@
 from odoo import models, fields
 
 class HrEmployee(models.Model):
+	_name = 'hr.employee'
 	_inherit = 'hr.employee'
 
 	employee_code : fields.Char('Codigo Empro', required=True)
