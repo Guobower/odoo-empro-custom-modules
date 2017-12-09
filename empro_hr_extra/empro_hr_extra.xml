@@ -12,7 +12,7 @@
                             <group>
                                 <field name="employee_code"/>
                                 <field name="legal_name"/>
-                                <field name="legal_name"/>
+                                <field name="start_date"/>
                             </group>
                         </group>
                      </page>

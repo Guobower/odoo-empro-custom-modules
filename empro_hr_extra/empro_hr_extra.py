@@ -8,10 +8,9 @@ from dateutil.relativedelta import relativedelta
 def str_to_datetime(strdate):
     return datetime.datetime.strptime(strdate, tools.DEFAULT_SERVER_DATE_FORMAT)
 
-class empro_employee(models.Model):
+class HrEmployee(models.Model):
     _inherit = "hr.employee"
 
-    _columns = {
         'employee_code': fields.Char('Codigo Empro', required=True),
         'legal_name': fields.Char('Nombre Legal'),
         'personal_email': fields.Char('Email Personal'),
@@ -35,8 +34,7 @@ class empro_employee(models.Model):
         'years_settlement': fields.Integer('Anos para liquidacion'),
         'months_settlement': fields.Integer('Meses para liquidacion'),
         'days_settlement': fields.Integer('Dias para liquidacion')
-    }
-
+    
     _defaults ={
         'start_date': datetime.date.today()
     }
@@ -61,4 +59,3 @@ class empro_employee(models.Model):
             self.months_settlement = rd.months
             self.days_settlement = rd.days
 
-empro_employee()
