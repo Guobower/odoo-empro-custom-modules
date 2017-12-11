@@ -4,7 +4,7 @@ from odoo import models, fields, api
 
 class hr_fields(models.Model):
 	_inherit = "hr.employee"
-	_name = 'hr_fields.hr_fields'
+	#_name = 'hr_fields.hr_fields'
 
 	employee_code = fields.Char('Codigo Empro', required=True)
 	legal_name =  fields.Char('Nombre Legal')
