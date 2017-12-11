@@ -6,20 +6,16 @@
             <field name="model">hr.employee</field>
             <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//notebook/page[last()]" position="after">
-                     <page name="hr_empro_settings" string="Campos Empro">
-                        <group>
-                            <group>
-                                <field name="employee_code"/>
-                                <!--field name="legal_name"/>
+                  <xpath expr="//field[@name='name']" position="after">
+                    <field name="employee_code"/>
+                  </xpath>
+                  <xpath expr="//field[@name='bank_account_id']" position="after">
+                     <!--field name="legal_name"/>
                                 <field name="personal_email"/>
                                 <field name="personal_phone"/>
                                 <field name="personal_mobile"/-->
                                 <field name="CNS_afiliado"/>
-                            </group>
-                        </group>
-                     </page>
-                </xpath>
+                  </xpath>
             </field>
         </record>
     </data>
