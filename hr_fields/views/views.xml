@@ -11,10 +11,10 @@
                         <group>
                             <group>
                                 <field name="employee_code"/>
-                                <field name="legal_name"/>
+                                <!--field name="legal_name"/>
                                 <field name="personal_email"/>
                                 <field name="personal_phone"/>
-                                <field name="personal_mobile"/>
+                                <field name="personal_mobile"/-->
                                 <field name="CNS_afiliado"/>
                             </group>
                         </group>
