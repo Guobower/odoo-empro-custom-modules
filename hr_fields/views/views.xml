@@ -1,5 +1,31 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-  <data>
+    <data>
+        <record id="hr_fields_form_view" model="ir.ui.view">
+            <field name="name">hr.employee.form.view</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page[last()]" position="after">
+                     <page name="hr_empro_settings" string="Campos Empro">
+                        <group>
+                            <group>
+                                <field name="employee_code"/>
+                                <field name="legal_name"/>
+                                <field name="personal_email"/>
+                                <field name="personal_phone"/>
+                                <field name="personal_mobile"/>
+                                <field name="CNS_afiliado"/>
+                            </group>
+                        </group>
+                     </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
+
     <!-- explicit list view definition -->
     <!--
     <record model="ir.ui.view" id="test_module.list">
@@ -55,5 +81,3 @@
     <menuitem name="Server to list" id="test_module" parent="test_module.menu_2"
               action="test_module.action_server"/>
     -->
-  </data>
-</odoo>

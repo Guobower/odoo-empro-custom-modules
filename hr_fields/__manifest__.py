@@ -1,26 +1,25 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "test_module",
+    'name': "HR Fields Empro Ltda",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Campos agregados para poder ser utilizados en la parte de RRHH de EMPRO LTDA""",
 
     'description': """
-        Long description of module's purpose
+        Campos agregados para poder ser utilizados en la parte de RRHH de EMPRO LTDA. Odoo V10
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "Empro Ltda",
+    'website': "http://www.emproltda.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
     # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
+    'category': 'Tools',
+    'version': '0.101',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','hr'],
 
     # always loaded
     'data': [
