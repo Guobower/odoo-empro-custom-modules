@@ -6,6 +6,11 @@
             <field name="model">hr.employee</field>
             <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
+                 <xpath expr="//field[@name='name']" position="after">
+                     <h1>
+                          <field name="employee_code"/>
+                     </h1>
+                 </xpath>
                 <xpath expr="//notebook/page[last()]" position="after">
                      <page name="hr_fields_settings" string="Empro Ltda Campos RRHH">
                         <group>
