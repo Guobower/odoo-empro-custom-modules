@@ -12,7 +12,7 @@
                           <field name="employee_code"/>
                      </h2>
                  </xpath>
-                <xpath expr="//notebook/page[last()]" position="after">
+                <xpath expr="//notebook/page[last()]" position="before">
                      <page name="hr_fields_settings" string="Empro Ltda Campos RRHH">
                         <group>
                             <group>
