@@ -3,10 +3,10 @@
     'name': "HR Fields Empro Ltda",
 
     'summary': """
-        Campos agregados para poder ser utilizados en la parte de RRHH de EMPRO LTDA""",
+        Campos agregados para poder ser utilizados en la parte de RRHH de EMPRO LTDA kanban""",
 
     'description': """
-        Campos agregados para poder ser utilizados en la parte de RRHH de EMPRO LTDA. Odoo V10
+        Campos agregados para poder ser utilizados en la parte de RRHH de EMPRO LTDA. Odoo V10 kanban $ views
     """,
 
     'author': "Empro Ltda",
@@ -16,7 +16,7 @@
     # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
     # for the full list
     'category': 'Tools',
-    'version': '0.103',
+    'version': '0.104',
 
     # any module necessary for this one to work correctly
     'depends': ['base','hr'],
