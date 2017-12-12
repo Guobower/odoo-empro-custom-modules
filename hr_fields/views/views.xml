@@ -16,7 +16,7 @@
                             <field name="personal_mobile"/>
                         </group>
                      </page>
-                </xpath>
+                </xpath> s
             </field>
         </record>
     </data>
