@@ -21,7 +21,6 @@
         </record>
     </data>
 </odoo>
-
     <!-- explicit list view definition -->
     <!--
     <record model="ir.ui.view" id="test_module.list">
