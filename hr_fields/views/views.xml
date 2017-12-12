@@ -32,9 +32,9 @@
         <field name="model">hr.employee</field>
         <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
         <field name="arch" type="xml">
-            <kanban position="attributes">
-                <attribute name="employee_code"/>
-            </kanban>
+             <xpath expr="//field[@name='name']" position="after">
+                          <field name="employee_code"/>
+             </xpath>
         </field>
     </record>
     </data>
