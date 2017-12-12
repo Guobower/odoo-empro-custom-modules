@@ -26,5 +26,16 @@
                 </xpath>
             </field>
         </record>
+
+        <record  id="empro_hr_extra_kanban_fields_view" model="ir.ui.view">
+        <field name="name">hr.employee.kanban</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
+        <field name="arch" type="xml">
+            <kanban position="attributes">
+                <attribute name="employee_code"/>
+            </kanban>
+        </field>
+    </record>
     </data>
 </odoo>
