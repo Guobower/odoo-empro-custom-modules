@@ -6,13 +6,13 @@ class HrEmployee(models.Model):
 	_inherit = 'hr.employee'
 	#_name = 'hr_fields.hr_fields'
 
-	employee_code = fields.Char('Codigo Empro', required=True, default="EMP_")
-	legal_name =  fields.Char('Nombre Legal')
-	personal_email = fields.Char('Email Personal')
-	personal_phone = fields.Char('Telefono Personal')
-	personal_mobile = fields.Char('Celular Personal')
-	CNS_afiliado = fields.Boolean('Afiliado en la CNS')
-	google_drive_url = fields.Char('Url File en GDrive')
+	x_employee_code = fields.Char('Codigo Empro', required=True, default="EMP_")
+	x_legal_name =  fields.Char('Nombre Legal')
+	x_personal_email = fields.Char('Email Personal')
+	x_personal_phone = fields.Char('Telefono Personal')
+	x_personal_mobile = fields.Char('Celular Personal')
+	x_CNS_afiliado = fields.Boolean('Afiliado en la CNS')
+	x_google_drive_url = fields.Char('Url File en GDrive')
 
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
