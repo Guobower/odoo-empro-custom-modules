@@ -16,7 +16,7 @@
                      <page name="hr_fields_settings" string="Empro Ltda Campos RRHH">
                         <group>
                             <group>
-                                  <field name="x_CNS_afiliado"/>
+                                  <field name="x_cns_afiliado"/>
                                   <field name="x_personal_email"/>
                                   <field name="x_personal_phone"/>
                                   <field name="x_personal_mobile"/>
