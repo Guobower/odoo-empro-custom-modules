@@ -16,11 +16,11 @@
                      <page name="hr_fields_settings" string="Empro Ltda Campos RRHH">
                         <group>
                             <group>
-                                  <field name="CNS_afiliado"/>
-                                  <field name="personal_email"/>
-                                  <field name="personal_phone"/>
-                                  <field name="personal_mobile"/>
-                                  <field name="google_drive_url"/>
+                                  <field name="x_CNS_afiliado"/>
+                                  <field name="x_personal_email"/>
+                                  <field name="x_personal_phone"/>
+                                  <field name="x_personal_mobile"/>
+                                  <field name="x_google_drive_url"/>
                             </group>
                         </group>
                      </page>
