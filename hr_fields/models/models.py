@@ -6,7 +6,7 @@ class HrEmployee(models.Model):
 	_inherit = 'hr.employee'
 	#_name = 'hr_fields.hr_fields'
 
-	employee_code = fields.Char('Codigo Empro', required=True)
+	employee_code = fields.Char('Codigo Empro', required=True, default="EMP_")
 	legal_name =  fields.Char('Nombre Legal')
 	personal_email = fields.Char('Email Personal')
 	personal_phone = fields.Char('Telefono Personal')
