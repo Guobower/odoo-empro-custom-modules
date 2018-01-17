@@ -13,6 +13,10 @@ class HrEmployee(models.Model):
 	personal_mobile = fields.Char('Celular Personal')
 	CNS_afiliado = fields.Boolean('Afiliado en la CNS')
 
+	gdrive_url = fields.Char('Url File en GDrive')
+
+	
+
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
 
 # class test_module(models.Model):

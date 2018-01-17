@@ -20,6 +20,7 @@
                                   <field name="personal_email"/>
                                   <field name="personal_phone"/>
                                   <field name="personal_mobile"/>
+                                  <field name="gdrive_url"/>
                             </group>
                         </group>
                      </page>
