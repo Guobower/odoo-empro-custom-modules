@@ -7,20 +7,20 @@
             <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
                  <xpath expr="//field[@name='name']" position="after">
-                     <label for="x_emp_employee_code" class="o_form_label oe_edit_only"/>
+                     <label for="x_employee_code" class="o_form_label oe_edit_only"/>
                      <h2>
-                          <field name="x_emp_employee_code"/>
+                          <field name="x_employee_code"/>
                      </h2>
                  </xpath>
                 <xpath expr="//notebook/page[last()]" position="before">
                      <page name="hr_fields_settings" string="Empro Ltda Campos RRHH">
                         <group>
                             <group>
-                                  <field name="x_emp_cns_afiliado"/>
-                                  <field name="x_emp_personal_email"/>
-                                  <field name="x_emp_personal_phone"/>
-                                  <field name="x_emp_personal_mobile"/>
-                                  <field name="x_emp_google_drive_url"/>
+                                  <field name="x_cns_afiliado"/>
+                                  <field name="x_personal_email"/>
+                                  <field name="x_personal_phone"/>
+                                  <field name="x_personal_mobile"/>
+                                  <field name="x_google_drive_url"/>
                             </group>
                         </group>
                      </page>
