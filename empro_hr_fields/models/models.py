@@ -15,6 +15,12 @@ class HrEmployee(models.Model):
 	x_google_drive_url = fields.Char('Url File en GDrive')
 	x_personal_nombre_emergencia = fields.Char('Nombre en caso de Emergencia')
 	x_personal_mobile_emergencia = fields.Char('Telefono en caso de Emergencia')
+	x_tetanos_fecha_primera_vacuna = fields.Date('Primera Vacuna Tetanos')
+	x_tetanos_fecha_segunda_vacuna = fields.Date('Segunda Vacuna Tetanos')
+	x_tetanos_fecha_tercera_vacuna = fields.Date('Tercera Vacuna Tetanos')
+	x_tetanos_fecha_cuarta_vacuna = fields.Date('Cuarta Vacuna Tetanos')
+	x_tetanos_fecha_quinta_vacuna = fields.Date('Quinta Vacuna Tetanos')
+	x_tetanos_fecha_renovacion_vacuna = fields.Date('Fecha de Renovacion de Vacuna de Tetanos')
 
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

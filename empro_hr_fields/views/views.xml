@@ -23,6 +23,7 @@
                                   <field name="x_google_drive_url"/>
                                   <field name="x_personal_nombre_emergencia"/>
                                   <field name="x_personal_mobile_emergencia"/>
+                                  <field name="x_tetanos_fecha_renovacion_vacuna"/>
                             </group>
                         </group>
                      </page>
