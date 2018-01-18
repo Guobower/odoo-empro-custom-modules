@@ -33,7 +33,7 @@
                                   <field name="x_tetanos_fecha_renovacion_vacuna"/>
                             </group>
                             <group string="Referencias Externas" modifiers="{}">
-                                  <field name="x_google_drive_url"/>
+                                  <field name="x_google_drive_url" widget="url"/>
                             </group>
                         </group>
                      </page>
