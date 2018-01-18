@@ -21,6 +21,8 @@
                                   <field name="x_personal_phone"/>
                                   <field name="x_personal_mobile"/>
                                   <field name="x_google_drive_url"/>
+                                  <field name="x_personal_nombre_emergencia"/>
+                                  <field name="x_personal_mobile_emergencia"/>
                             </group>
                         </group>
                      </page>
@@ -35,7 +37,7 @@
         <field name="arch" type="xml">
              <xpath expr="//field[@name='name']" position="after">
                           <br/>
-                          <field name="x_emp_employee_code"/>
+                          <field name="x_employee_code"/>
              </xpath>
         </field>
     </record>
