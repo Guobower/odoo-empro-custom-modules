@@ -15,15 +15,25 @@
                 <xpath expr="//notebook/page[last()]" position="before">
                      <page name="hr_fields_settings" string="Empro Ltda Campos RRHH">
                         <group>
-                            <group>
-                                  <field name="x_cns_afiliado"/>
+                            <group string="Información de Emergencia" modifiers="{}">
+                                  <field name="x_personal_nombre_emergencia"/>
+                                  <field name="x_personal_mobile_emergencia"/>
+                            </group>
+                            <group string="Información Personal" modifiers="{}">
+                                  
                                   <field name="x_personal_email"/>
                                   <field name="x_personal_phone"/>
                                   <field name="x_personal_mobile"/>
-                                  <field name="x_google_drive_url"/>
-                                  <field name="x_personal_nombre_emergencia"/>
-                                  <field name="x_personal_mobile_emergencia"/>
+                            </group>
+                            <group string="Habilitación de Personal" modifiers="{}">
+                                 <field name="x_cns_afiliado"/>
+                            </group>
+
+                            <group string="Inmunizaciones" modifiers="{}">
                                   <field name="x_tetanos_fecha_renovacion_vacuna"/>
+                            </group>
+                            <group string="Referencias Externas" modifiers="{}">
+                                  <field name="x_google_drive_url"/>
                             </group>
                         </group>
                      </page>
