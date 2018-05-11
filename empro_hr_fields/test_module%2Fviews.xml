@@ -6,32 +6,23 @@
             <field name="model">hr.employee</field>
             <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//field[@name='name']" position="after">
-                     <label for="x_employee_code" class="o_form_label oe_edit_only"/>
-                     <h2>
-                          <field name="x_employee_code"/>
-                     </h2>
-                </xpath>
-                <xpath expr="//notebook/page[last()]" position="before">
-                     <page name="hr_fields_settings" string="Empro Ltda Campos RRHH" groups="hr.group_hr_user" >
+		    <xpath expr="//notebook/page[last()]" position="before">
+                     <page name="hr_fields_settings" string="Empro Ltda Campos RRHH">
                         <group>
                             <group string="Información de Emergencia" modifiers="{}">
                                   <field name="x_personal_nombre_emergencia"/>
                                   <field name="x_personal_telefono_emergencia"/>
-                                  <field name="x_alergias"/>
-                                  <field name="x_factor_sanguineo"/>
-
                             </group>
                             <group string="Información Personal" modifiers="{}">
-                                  <field name="x_employee_code"/>
+                                  <field name="x_employee_code"/> 
                                   <field name="x_legal_name"/>
                                   <field name="x_personal_email"/>
                                   <field name="x_personal_phone"/>
                                   <field name="x_personal_mobile"/>
                             </group>
-                            <group string="Habilitación de Personal" modifiers="{}" >
-                                 <field name="x_proyecto_asignado_id"/>
-                                 <field name="x_fase_asignado_id"/>
+                            <group string="Habilitación de Personal" modifiers="{}">
+                                 <field name="x_proyecto_asignado"/>
+                                 <field name="x_fase_asignado"/>
                                  <field name="x_requiere_liquidacion_interna"/>
                                  <field name="x_cns_afiliado"/>
                                  <field name="x_seguro_de_vida"/>
@@ -43,7 +34,6 @@
                                  <field name="x_total_ganado_esperado"/>
                                  <field name="x_fecha_de_ingreso"/>
                                  <field name="x_cargo"/>
-                                 <field name="job_id"/>
                                  <field name="x_modalidad_de_trabajo"/>
                                  <field name="x_fecha_de_contrato"/>
                                  <field name="x_institucion_emisora_de_manejo_defensivo"/>
@@ -63,7 +53,7 @@
                                   <field name="x_fiebre_amarilla_fecha_vacuna"/>
                             </group>
 
-                             <group string="Fechas de expiracion" modifiers="{}">
+                             <group string="Fecha de expiracion" modifiers="{}">
                                   <field name="x_expiracion_ci"/>
                                   <field name="x_expiracion_licencia_de_conducir"/>
                                   <field name="x_expiracion_manejo_defensivo"/>
@@ -71,7 +61,6 @@
                                   <field name="x_expiracion_de_examen_complementarios"/>
                                   <field name="x_expiracion_seguro_de_vida"/>
                                   <field name="x_expiracion_seguro_de_accidentes"/>
-                                  <field name="x_expiracion_credencial"/>                                  
                             </group> 
 
                             <group string="Referencias Externas" modifiers="{}">
@@ -79,7 +68,7 @@
                             </group>
                         </group>
                      </page>
-                     <page name="mol_hr_fields_settings" string="Empro Ltda Campos MOL RELCOM" groups="hr.group_hr_user">
+                     <page name="mol_hr_fields_settings" string="Empro Ltda Campos MOL RELCOM">
                         <group>
                             <group string="Información general MOL" modifiers="{}">
                                   <field name="x_mol"/>
@@ -114,16 +103,15 @@
         </record>
 
         <record  id="empro_hr_extra_kanban_fields_view" model="ir.ui.view">
-          <field name="name">hr.employee.kanban</field>
-          <field name="model">hr.employee</field>
-          <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
-          <field name="arch" type="xml">
-               <xpath expr="//field[@name='name']" position="after">
-                            <br/>
-                            <field name="x_employee_code"/>
-               </xpath>
-          </field>
+        <field name="name">hr.employee.kanban</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='name']" position="after">
+                          <br/>
+                          <field name="x_employee_code"/>
+             </xpath>
+        </field>
     </record>
     </data>
 </odoo>
-

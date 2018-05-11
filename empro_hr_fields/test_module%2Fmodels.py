@@ -15,13 +15,11 @@ class HrEmployee(models.Model):
     x_google_drive_url = fields.Char('Url File en GDrive')
     x_personal_nombre_emergencia = fields.Char('Nombre en caso de Emergencia')
     x_personal_telefono_emergencia = fields.Char('Telefono en caso de Emergencia')
-    x_alergias = fields.Char('Alergias')
-    x_factor_sanguineo = fields.Char('Factor Sanguineo')
     x_cns_afiliado = fields.Boolean('Afiliado en la CNS')
     x_seguro_de_vida = fields.Boolean('Tiene Seguro de Vida')
     x_seguro_de_accidente = fields.Boolean('Tiene Seguro de Accidentes')
-    x_proyecto_asignado_id = fields.Many2one('project.project', string='Proyecto Asignado')
-    x_fase_asignado_id = fields.Many2one('project.task', string='Fase Asignado')
+    x_proyecto_asignado = fields.Many2one('project.project', string='Proyecto Asignado')
+    x_fase_asignado = fields.Many2one('project.task',string='Fase Asignado')
 
     # datos para control y renovacion 
     x_tetanos_fecha_primera_vacuna = fields.Date('Primera Vacuna Tetanos')
@@ -40,7 +38,6 @@ class HrEmployee(models.Model):
     x_expiracion_de_examen_complementarios = fields.Date('Fecha de expiracion de examenes complementarios')
     x_expiracion_seguro_de_vida = fields.Date('Fecha de expiracion de seguro de vida')
     x_expiracion_seguro_de_accidentes = fields.Date('Fecha de expiracion de seguro de accidentes')
-    x_expiracion_credencial = fields.Date('Fecha de expiracion de credencial')
 
     # ficha de registro EMPRO
     x_carnet_Identidad = fields.Char('Carnet de Identidad')
@@ -56,7 +53,7 @@ class HrEmployee(models.Model):
 
     # campos utiles para retiro de personal
     x_requiere_liquidacion_interna = fields.Boolean('Requiere liquidacion interna')
-    x_modalidad_de_trabajo = fields.Selection(selection=[( 'Oficina','Trabajo en horarios de Oficina'), ( '21/7', '21 Trabajo/7 Descanso'), ('14/14','14 Trabajo/14 Descanso'), ('Lun-Vie','Lunes a Viernes')])
+    x_modalidad_de_trabajo = fields.Selection(selection=[('Trabajo en horarios de Oficina', 'Oficina'), ('21 Trabajo/7 Descanso', '21/7'), ('14 Trabajo/14 Descanso', '14/14'), ('Lunes a Viernes', 'Lun-Vie')])
 
     # campos adicionales importantes
 
@@ -69,7 +66,7 @@ class HrEmployee(models.Model):
     x_mol_contacto_de_aval = fields.Char('Personal de Contacto Aval MOL')
     x_mol_comunidad = fields.Char('Comunidad MOL')
     x_mol_residencia = fields.Char('Residencia MOL')
-    x_mol_tipo_cargo = fields.Selection(selection=[('no-calificada', 'No Calificada'), ('semi-calificada', 'Semi Calificada'), ('calificada', 'Calificada'), ('directo', 'Directo')])
+    x_mol_tipo_cargo = fields.Selection(selection=[('No Calidicada', 'no-calificada'), ('Semi Calificada', 'semi-calificada'), ('Calificada', 'calificada'), ('Directo', 'directo')])
     x_mol_fecha_de_contrato = fields.Date('Fecha de Contrato MOL')
     x_mol_fecha_de_retiro = fields.Date('Fecha de Retiro MOL')
     x_mol_fue_retirado = fields.Boolean('Es personal retirado de la comunidad')
