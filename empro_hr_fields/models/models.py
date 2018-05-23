@@ -86,20 +86,20 @@ class HrEmployee(models.Model):
     x_mol_se_presento_documentacion = fields.Boolean('Se presento la documentacion a fiscalizacion')
     x_mol_observaciones = fields.Char('Observaciones MOL')
 
-    x_empro_contratos = fields.One2many(
-        'hr.employee.empro.contracts.line',
-        'employee_id',
-        string='Lineas de contratos',
-        copy=True,
-    )
+#    x_empro_contratos = fields.One2many(
+#        'hr.employee.empro.contracts.line',
+#        'employee_id',
+#        string='Lineas de contratos',
+#        copy=True,
+#    )
 
-class HrEmployeeEmproContracts.line(models.Model):
-    _name='hr.employee.empro.contracts.line'
-    _description='Contratos pasados con EMPRO'
-
-    x_empro_contrato_finalizado = fields.Boolean('Finalizado')
-    x_empro_contrato_comentario = fields.Char('Comentario')
-    x_empro_contrato_inicio = fields.Date('Fecha inicio')
-    x_empro_contrato_fin = fields.Date('Fecha Fin')  
-    x_empro_contrato_proyecto = fields.Char('Proyecto')
+#class HrEmployeeEmproContracts.line(models.Model):
+#    _name='hr.employee.empro.contracts.line'
+#    _description='Contratos pasados con EMPRO'
+#
+#    x_empro_contrato_finalizado = fields.Boolean('Finalizado')
+#    x_empro_contrato_comentario = fields.Char('Comentario')
+#    x_empro_contrato_inicio = fields.Date('Fecha inicio')
+#    x_empro_contrato_fin = fields.Date('Fecha Fin')  
+#    x_empro_contrato_proyecto = fields.Char('Proyecto')
 

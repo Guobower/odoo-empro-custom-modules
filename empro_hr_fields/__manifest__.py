@@ -8,7 +8,7 @@
     'description': """
         Campos agregados para poder ser utilizados en la parte de RRHH de EMPRO LTDA. Odoo V11 kanban $ updated fields new update
 
-        view updated, added widget url 201805231636
+        view updated, added widget url 201805231726
     """,
 
     'author': "Empro Ltda",
@@ -18,7 +18,7 @@
     # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
     # for the full list
     'category': 'Tools',
-    'version': '0.1805231636',
+    'version': '0.1805231726',
 
     # any module necessary for this one to work correctly
     'depends': ['base','hr','project'],

@@ -123,7 +123,7 @@
                         </group>
                      </page>
 
-                    <!-- anteriores contratos -->
+                    <!-- anteriores contratos 
                     <page name="empro_contracts_hr_fields_settings" string="Empro Ltda Contratos Pasados" groups="hr.group_hr_user">
                           <notebook>
                             <page string="Contratos Pasados">
@@ -134,7 +134,7 @@
                                  <field name="x_empro_contrato_comentario"/>                               
                             </page>
                           </notebook>
-                    </page>
+                    </page>-->
 
                 </xpath>
             </field>
