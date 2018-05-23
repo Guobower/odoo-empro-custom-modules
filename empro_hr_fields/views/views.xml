@@ -148,7 +148,13 @@
                <xpath expr="//field[@name='name']" position="after">
                             <br/>
                             <field name="x_employee_code"/>
+               </xpath>
+          </field>
+          <field name="arch" type="xml">
+               <xpath expr="//field[@name='mobile_phone']" position="after">
+                            <br/>
                             <field name="x_es_externo" widget="boolean"/>
+                            <field name="x_proyecto_asignado_id"/>
                </xpath>
           </field>
     </record>
