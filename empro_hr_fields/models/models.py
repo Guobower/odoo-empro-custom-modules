@@ -22,6 +22,8 @@ class HrEmployee(models.Model):
     x_seguro_de_accidente = fields.Boolean('Tiene Seguro de Accidentes')
     x_proyecto_asignado_id = fields.Many2one('project.project', string='Proyecto Asignado')
     x_fase_asignado_id = fields.Many2one('project.task', string='Fase Asignado')
+    x_es_externo = fields.Boolean('Es Personal Externo')
+    x_residencia = fields.Char('Residencia')
 
     # datos para control y renovacion 
     x_tetanos_fecha_primera_vacuna = fields.Date('Primera Vacuna Tetanos')
@@ -41,6 +43,14 @@ class HrEmployee(models.Model):
     x_expiracion_seguro_de_vida = fields.Date('Fecha de expiracion de seguro de vida')
     x_expiracion_seguro_de_accidentes = fields.Date('Fecha de expiracion de seguro de accidentes')
     x_expiracion_credencial = fields.Date('Fecha de expiracion de credencial')
+    x_hepatitis_fecha_primera_vacuna = fields.Date('Primera Vacuna Hepatitis')
+    x_hepatitis_fecha_segunda_vacuna = fields.Date('Segunda Vacuna Hepatitis')
+    x_hepatitis_fecha_terera_vacuna = fields.Date('Tercera Vacuna Hepatitis')
+    x_carnet_sanitario = fields.Date('Fecha de Carnet sanitario')
+    x_expiracion_carnet_sanitario = fields.Date('Fecha de Expiracion de Carnet sanitario')
+    x_expiracion_hepatitis_fecha_primera_vacuna = fields.Date('Fecha de Expiracion Primera Vacuna Hepatitis')
+    x_expiracion_hepatitis_fecha_segunda_vacuna = fields.Date('Fecha de Expiracion Segunda Vacuna Hepatitis')
+    x_expiracion_hepatitis_fecha_terera_vacuna = fields.Date('Fecha de Expiracion Tercera Vacuna Hepatitis')
 
     # ficha de registro EMPRO
     x_carnet_Identidad = fields.Char('Carnet de Identidad')
@@ -48,7 +58,7 @@ class HrEmployee(models.Model):
     x_licencia_de_conducir = fields.Char('Numero de licencia de conducir')
     x_haber_basico = fields.Float('Haber Basico')
     x_liquido_pagable = fields.Float('Liquido Pagable')
-    x_total_ganado_esperado = fields.Char('Total Ganado Esperado')
+    x_total_ganado_esperado = fields.Char('Total Ganado Esperado (real)')
     x_fecha_de_ingreso = fields.Date('Fecha de Ingreso')
     x_fecha_de_contrato = fields.Date('Fecha de Contrato')
     x_cargo = fields.Char('Cargo')
@@ -56,7 +66,7 @@ class HrEmployee(models.Model):
 
     # campos utiles para retiro de personal
     x_requiere_liquidacion_interna = fields.Boolean('Requiere liquidacion interna')
-    x_modalidad_de_trabajo = fields.Selection(selection=[( 'Oficina','Trabajo en horarios de Oficina'), ( '21/7', '21 Trabajo/7 Descanso'), ('14/14','14 Trabajo/14 Descanso'), ('Lun-Vie','Lunes a Viernes')])
+    x_modalidad_de_trabajo = fields.Selection(string='Modalidad de Trabajo', selection=[( 'Oficina','Trabajo en horarios de Oficina'),( '25/7', '25 Trabajo/7 Descanso'),  ( '21/7', '21 Trabajo/7 Descanso'), ('14/14','14 Trabajo/14 Descanso'), ('Lun-Vie','Lunes a Viernes')])
 
     # campos adicionales importantes
 
@@ -69,24 +79,27 @@ class HrEmployee(models.Model):
     x_mol_contacto_de_aval = fields.Char('Personal de Contacto Aval MOL')
     x_mol_comunidad = fields.Char('Comunidad MOL')
     x_mol_residencia = fields.Char('Residencia MOL')
-    x_mol_tipo_cargo = fields.Selection(selection=[('no-calificada', 'No Calificada'), ('semi-calificada', 'Semi Calificada'), ('calificada', 'Calificada'), ('directo', 'Directo')])
+    x_mol_tipo_cargo = fields.Selection(string='MOL Tipo Cargo',selection=[('no-calificada', 'No Calificada'), ('semi-calificada', 'Semi Calificada'), ('calificada', 'Calificada'), ('directo', 'Directo')])
     x_mol_fecha_de_contrato = fields.Date('Fecha de Contrato MOL')
     x_mol_fecha_de_retiro = fields.Date('Fecha de Retiro MOL')
     x_mol_fue_retirado = fields.Boolean('Es personal retirado de la comunidad')
     x_mol_se_presento_documentacion = fields.Boolean('Se presento la documentacion a fiscalizacion')
     x_mol_observaciones = fields.Char('Observaciones MOL')
 
+    x_empro_contratos = fields.One2many(
+        'hr.employee.empro.contracts.line',
+        'employee_id',
+        string='Lineas de contratos',
+        copy=True,
+    )
 
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+class HrEmployeeEmproContracts.line(models.Model):
+    _name='hr.employee.empro.contracts.line'
+    _description='Contratos pasados con EMPRO'
 
-# class test_module(models.Model):
-#     _name = 'test_module.test_module'
+    x_empro_contrato_finalizado = fields.Boolean('Finalizado')
+    x_empro_contrato_comentario = fields.Char('Comentario')
+    x_empro_contrato_inicio = fields.Date('Fecha inicio')
+    x_empro_contrato_fin = fields.Date('Fecha Fin')  
+    x_empro_contrato_proyecto = fields.Char('Proyecto')
 
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         self.value2 = float(self.value) / 100

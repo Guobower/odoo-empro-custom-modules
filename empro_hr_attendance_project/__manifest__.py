@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "HR Fields Empro Ltda - V2",
+    'name': "HR Attendance uses project location Empro Ltda ",
 
     'summary': """
-        Campos agregados para poder ser utilizados en la parte de RRHH de EMPRO LTDA kanban""",
+        Campos agregados para poder ser utilizados en la parte de asistencia de RRHH de EMPRO LTDA""",
 
     'description': """
-        Campos agregados para poder ser utilizados en la parte de RRHH de EMPRO LTDA. Odoo V11 kanban $ updated fields new update
-
-        view updated, added widget url 201805231636
+        Campos agregados para poder ser utilizados en la parte de RRHH de EMPRO LTDA. asistencia
+        view updated, added widget url 201805141755
     """,
 
     'author': "Empro Ltda",
@@ -18,7 +17,7 @@
     # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
     # for the full list
     'category': 'Tools',
-    'version': '0.1805231636',
+    'version': '0.1805141755',
 
     # any module necessary for this one to work correctly
     'depends': ['base','hr','project'],
@@ -27,8 +26,7 @@
     'data': [
         # 'security/ir.model.access.csv',
         'views/views.xml',
-        'views/templates.xml',
-        'reports/hr_employee_credential.xml'
+        'views/templates.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

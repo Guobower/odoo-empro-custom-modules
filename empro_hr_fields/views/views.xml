@@ -22,14 +22,21 @@
                                   <field name="x_factor_sanguineo"/>
 
                             </group>
+
+                            <group string="Referencias Externas" modifiers="{}">
+                                  <field name="x_google_drive_url" widget="url"/>
+                            </group>
+
                             <group string="Información Personal" modifiers="{}">
+                                  <field name="x_es_externo"/>
                                   <field name="x_employee_code"/>
                                   <field name="x_legal_name"/>
                                   <field name="x_personal_email"/>
                                   <field name="x_personal_phone"/>
                                   <field name="x_personal_mobile"/>
+                                  <field name="x_residencia"/>
                             </group>
-                            <group string="Habilitación de Personal" modifiers="{}" >
+                            <group string="Habilitación de Personal" modifiers="{}" >                                 
                                  <field name="x_proyecto_asignado_id"/>
                                  <field name="x_fase_asignado_id"/>
                                  <field name="x_requiere_liquidacion_interna"/>
@@ -61,6 +68,10 @@
                                   <field name="x_tetanos_fecha_renovacion_vacuna"/>
                                   <field name="x_fiebre_amarilla_fecha_renovacion_vacuna"/>
                                   <field name="x_fiebre_amarilla_fecha_vacuna"/>
+                                  <field name="x_hepatitis_fecha_primera_vacuna"/>
+                                  <field name="x_hepatitis_fecha_segunda_vacuna"/>
+                                  <field name="x_hepatitis_fecha_terera_vacuna"/>
+                                  <field name="x_carnet_sanitario"/>
                             </group>
 
                              <group string="Fechas de expiracion" modifiers="{}">
@@ -72,11 +83,13 @@
                                   <field name="x_expiracion_seguro_de_vida"/>
                                   <field name="x_expiracion_seguro_de_accidentes"/>
                                   <field name="x_expiracion_credencial"/>                                  
+                                  <field name="x_expiracion_carnet_sanitario"/>                                  
+                                  <field name="x_expiracion_hepatitis_fecha_primera_vacuna"/>                                  
+                                  <field name="x_expiracion_hepatitis_fecha_segunda_vacuna"/>                                  
+                                  <field name="x_expiracion_hepatitis_fecha_terera_vacuna"/>                                  
                             </group> 
 
-                            <group string="Referencias Externas" modifiers="{}">
-                                  <field name="x_google_drive_url" widget="url"/>
-                            </group>
+                            
                         </group>
                      </page>
                      <page name="mol_hr_fields_settings" string="Empro Ltda Campos MOL RELCOM" groups="hr.group_hr_user">
@@ -102,13 +115,27 @@
                             </group>
 
                             <group string="Información entregada a Fiscalización" modifiers="{}">
-                                  <field name="x_mol_se_presento_documentacion"/>
+                                  <field name="x_mol_se_presento_documentacion" widget="boolean"/>
                             </group>
                             <group string="Notas" modifiers="{}">
                                   <field name="x_mol_observaciones" widget="url"/>
                             </group>
                         </group>
                      </page>
+
+                    <!-- anteriores contratos -->
+                    <page name="empro_contracts_hr_fields_settings" string="Empro Ltda Contratos Pasados" groups="hr.group_hr_user">
+                          <notebook>
+                            <page string="Contratos Pasados">
+                                 <field name="x_empro_contrato_finalizado"/>
+                                 <field name="x_empro_contrato_inicio"/>
+                                 <field name="x_empro_contrato_fin"/>
+                                 <field name="x_empro_contrato_proyecto"/>  
+                                 <field name="x_empro_contrato_comentario"/>                               
+                            </page>
+                          </notebook>
+                    </page>
+
                 </xpath>
             </field>
         </record>
@@ -121,6 +148,7 @@
                <xpath expr="//field[@name='name']" position="after">
                             <br/>
                             <field name="x_employee_code"/>
+                            <field name="x_es_externo" widget="boolean"/>
                </xpath>
           </field>
     </record>
