@@ -9,8 +9,12 @@ class HrAttendance(models.Model):
     x_proyecto_asignado_id = fields.Many2one('project.project', string='Proyecto Asignado')
     x_fase_asignado_id = fields.Many2one('project.task', string='Fase Asignado')
     x_comentarios_del_dia_de_asistencia = fields.Char('Comentarios del dia')
-    x_biometrico = fields.Selection(selection=[( '105','EMPRO Lagunillas'), ( 'CAM', 'EMPRO Camiri'), ('SCZ','Emro Santa Cruz'), ('CBB','Empro Oficina Central'), ('110','Empro Tamborada'), ('109','Empro Nancahuazu'),('114','Empro Catering')])
-    x_es_descansp = fields.Boolean('Es descanso?')
+    x_biometrico = fields.Selection(string='Biometrico',selection=[( '105','EMPRO Lagunillas'), ( 'CAM', 'EMPRO Camiri'), ('SCZ','Emro Santa Cruz'), ('CBB','Empro Oficina Central'), ('110','Empro Tamborada'), ('109','Empro Nancahuazu'),('114','Empro Catering'), ( 'ICS5','EMPRO ICS5')])
+    x_es_descanso = fields.Boolean('Es descanso?')
+    x_es_falta_justificada = fields.Boolean('Es falta justificada?')
+    x_es_falta_no_justificada = fields.Boolean('Es falta no justificada?')
+    x_es_haber_basico = fields.Boolean('Es con pago de haber basico?')
+    x_es_vacacion = fields.Boolean('Es vacacion?')
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
 

@@ -12,6 +12,10 @@
           <field name="x_comentarios_del_dia_de_asistencia"/>
           <field name="x_biometrico"/>
           <field name="x_es_descanso"/>
+          <field name="x_es_falta_justificada"/>
+          <field name="x_es_falta_no_justificada"/>
+          <field name="x_es_haber_basico"/>
+          <field name="x_es_vacacion"/>
         </xpath>
       </field>
     </record>
@@ -26,6 +30,10 @@
           <field name="x_comentarios_del_dia_de_asistencia"/>
           <field name="x_biometrico"/>
           <field name="x_es_descanso"/>
+          <field name="x_es_falta_justificada"/>
+          <field name="x_es_falta_no_justificada"/>
+          <field name="x_es_haber_basico"/>
+          <field name="x_es_vacacion"/>
         </xpath>
       </field>
     </record>

@@ -7,7 +7,7 @@
 
     'description': """
         Campos agregados para poder ser utilizados en la parte de RRHH de EMPRO LTDA. asistencia
-        view updated, added widget url 201805141755
+        view updated, added widget url 2018006201713
     """,
 
     'author': "Empro Ltda",
@@ -17,7 +17,7 @@
     # Check https://github.com/odoo/odoo/blob/master/odoo/addons/base/module/module_data.xml
     # for the full list
     'category': 'Tools',
-    'version': '0.1805141755',
+    'version': '0.18006201713',
 
     # any module necessary for this one to work correctly
     'depends': ['base','hr','project'],
