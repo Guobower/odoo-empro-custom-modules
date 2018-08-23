@@ -28,7 +28,7 @@ class HrEmployee(models.Model):
     # datos para control y renovacion 
     x_tetanos_fecha_primera_vacuna = fields.Date('Primera Vacuna Tetanos')
     x_tetanos_fecha_segunda_vacuna = fields.Date('Segunda Vacuna Tetanos')
-    x_tetanos_fecha_tercera_vacuna = fields.Date('Tercera Vacuna Tetanos')
+    x_tetanos_fecha_segunda_vacuna = fields.Date('Tercera Vacuna Tetanos')
     x_tetanos_fecha_cuarta_vacuna = fields.Date('Cuarta Vacuna Tetanos')
     x_tetanos_fecha_quinta_vacuna = fields.Date('Quinta Vacuna Tetanos')
     x_tetanos_fecha_renovacion_vacuna = fields.Date('Fecha de Renovacion de Vacuna de Tetanos')
@@ -85,6 +85,8 @@ class HrEmployee(models.Model):
     x_mol_fue_retirado = fields.Boolean('Es personal retirado de la comunidad')
     x_mol_se_presento_documentacion = fields.Boolean('Se presento la documentacion a fiscalizacion')
     x_mol_observaciones = fields.Char('Observaciones MOL')
+
+    
 
 #    x_empro_contratos = fields.One2many(
 #        'hr.employee.empro.contracts.line',
