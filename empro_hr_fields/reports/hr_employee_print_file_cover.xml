@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+        id="hr_employee_print_file_cover"
+        string="Imprimir File Cover - Lomo y Caratula"
+        model="hr.employee"
+        report_type="qweb-pdf"
+        name="empro_hr_fields.print_employee_file_cover"
+        file="empro_hr_fields.print_employee_file_cover"
+        print_report_name="'Imprimir File Cover - %s' % (object.name).replace('/', '')"
+    />
+
+    <template id="print_employee_file_cover">
+      <t t-call="web.basic_layout">
+            <div class="page">
+                <t t-foreach="docs" t-as="employee">
+                  <br/>
+                  Caratula para file
+                  <br/>
+                  <br/>
+                  <table style="width:1024px;border: 1pt solid #dddddd; border-collapse:separate; border-radius:8pt; margin:5pt;">
+                    <tr>
+                      <td>
+                        <div align="center" style="height:20px">
+                             <img align="center" t-if="employee.company_id and employee.company_id.logo" height="100px" t-att-src="'data:image/png;base64,%s' % to_text(employee.company_id.logo)" style="max-width:200pt; height:auto;overflow: hidden;" alt="Company Logo"/> 
+                        </div>
+                      </td>
+                   </tr>
+                   <tr>
+                     <td></td>
+                      <td >
+                        <table>
+                          <tr>
+                            <td valign="bottom"  style="font-family: Arial;font-size:8pt;font-weight: bold;">Código EMPRO</td>
+                          </tr>
+                          <tr>
+                            <td style="background:#eeeeee;justify-content: center;overflow:hidden;">
+                              <div >
+                               <img  t-if="employee.x_employee_code" align="center" style="height:50px;" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', employee.x_employee_code, 230, 50)"/>
+                                      <br />
+                                <div style="font-family: Arial;font-size:15pt;" align="center"><t t-esc="employee.x_employee_code"/></div>
+                             </div>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                   <tr>
+                     <td colspan="2" style="width:100%" >
+                        <table>
+                          <tr>
+                            <td valign="bottom" style="font-family: Arial;font-size:8pt;font-weight: bold;">Nombre y Apellido</td>
+                          </tr>
+                          <tr>
+                            <td valign="center" style="background:#eeeeee; font-family: Arial;font-size:15pt;width:1024px;">
+                              <div>
+                                <t t-esc="employee.name"/>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                     </td>
+                   </tr>
+                   
+                   <tr>
+                     <td colspan="2" style="width:100%" >
+                        <table>
+                          <tr>
+                            <td valign="bottom" style="font-family: Arial;font-size:8pt;font-weight: bold;">Cargo</td>
+                          </tr>
+                          <tr>
+                            <td valign="center" style="background:#eeeeee; font-family: Arial;font-size:15pt;width:1024px;">
+                              <t t-esc="employee.job_id.name"/> |  <t t-esc="employee.x_cargo"/> 
+                            </td>
+                          </tr>
+                        </table>
+                     </td>
+                   </tr>
+                   
+                   <tr>
+                     <td colspan="2" style="width:100%" >
+                        <table>
+                          <tr>
+                            <td valign="bottom" style="font-family: Arial;font-size:8pt;font-weight: bold;">Proyecto</td>
+                          </tr>
+                          <tr>
+                            <td valign="center" style="background:#eeeeee; font-family: Arial;font-size:15pt;width:1024px">
+                              <t t-esc="employee.x_proyecto_asignado_id.name"/> 
+                            </td>
+                          </tr>
+                        </table>
+                     </td>
+                   </tr>
+                   
+                   <tr>
+                     <td colspan="2" style="width:100%" >
+                        <table>
+                          <tr>
+                            <td valign="bottom" style="font-family: Arial;font-size:8pt;font-weight: bold;">Fase</td>
+                          </tr>
+                          <tr>
+                            <td valign="center" style="background:#eeeeee; font-family: Arial;font-size:15pt;width:1024px">
+                              <t t-esc="employee.x_fase_asignado_id.name"/> 
+                            </td>
+                          </tr>
+                        </table>
+                     </td>
+                   </tr>
+                   
+                    <tr>
+                     <td colspan="2" style="width:100%" >
+                        <table>
+                          <tr>
+                            <td valign="bottom" style="font-family: Arial;font-size:8pt;font-weight: bold;">Fecha de impresion de caratula</td>
+                          </tr>
+                          <tr>
+                            <td valign="center" style="background:#eeeeee; font-family: Arial;font-size:15pt;width:1024px">
+                              <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %H:%M')"/>
+                            </td>
+                          </tr>
+                        </table>
+                     </td>
+                   </tr>
+                   
+                  </table>
+                   
+                   <br/>
+                   
+                  <br/>
+                   caratula para oreja de file
+                   <br/>
+                   <br/>
+                    <table style="width:1024px;border: 1pt solid #dddddd; border-collapse:separate; border-radius:8pt; margin:5pt;">
+                    
+                    <tr>
+                       <td>
+                         <table>
+                           <tr>
+                             <td valign="bottom" style="font-family: Arial;font-size:8pt;font-weight: bold;">Código EMPRO</td>
+                           </tr>
+                           <tr>
+                             <td align="center"  style="background:#eeeeee;justify-content: center;overflow:hidden;">
+                               <div>
+                                <img t-if="employee.x_employee_code" align="center" style="height:40px;" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', employee.x_employee_code, 200, 40)"/>
+                              </div>
+                             </td>
+                           </tr>
+                         </table>
+                       </td>
+                       
+                       <td>
+                         <table>
+                          <tr>
+                             <td valign="bottom" style="font-family: Arial;font-size:5pt;font-weight: bold;">Código EMPRO</td>
+                           </tr>
+                          <tr>
+                            <td valign="center" align="center" style="background:#eeeeee; font-family: Arial;font-size:10pt">
+                              <t t-esc="employee.x_employee_code"/>
+                            </td>
+                          </tr>
+                        </table>
+                       </td>
+                       
+                       <td>
+                         <table>
+                          <tr>
+                            <td valign="bottom" style="font-family: Arial;font-size:8pt;font-weight: bold;">Nombre y Apellido</td>
+                          </tr>
+                          <tr>
+                            <td valign="center" align="center" style="background:#eeeeee; font-family: Arial;font-size:15pt;width:1024px;">
+                              <div>
+                                <t t-esc="employee.name"/>
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                       </td>
+                       
+                       <td>
+                         <table>
+                          <tr>
+                            <td valign="bottom" style="font-family: Arial;font-size:8pt;font-weight: bold;">Cargo</td>
+                          </tr>
+                          <tr>
+                            <td valign="center" align="center" style="background:#eeeeee; font-family: Arial;font-size:12pt;width:1024px;">
+                              <div>
+                               <t t-esc="employee.job_id.name"/> |  <t t-esc="employee.x_cargo"/> 
+                              </div>
+                            </td>
+                          </tr>
+                        </table>
+                       </td>
+                     </tr>
+                    
+                   
+                  </table>
+                   
+                </t>
+            </div>
+        </t>
+    </template>
+
+
+</odoo>
